@@ -53,7 +53,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\CameraController.cs" />
      <Compile Include="Assets\Script\CharacterScript.cs" />
+     <Compile Include="Assets\Script\CoinScript.cs" />
+     <Compile Include="Assets\Script\GlobalScript.cs" />
+     <Compile Include="Assets\Script\MusuhScript.cs" />
+     <Compile Include="Assets\Script\platform.cs" />
+     <Compile Include="Assets\Script\PlatformAtas.cs" />
+     <Compile Include="Assets\Script\TextScript.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/dimas/OneDrive/Documents/GameAkhir/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>

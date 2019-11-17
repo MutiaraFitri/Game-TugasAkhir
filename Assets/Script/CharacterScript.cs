@@ -6,7 +6,8 @@ public class CharacterScript : MonoBehaviour
 {
     Animator charAnimator;
     GameObject attactEffect;
-    public Rigidbody2D jump;
+    private Rigidbody2D jump;
+    private int countJump=0;
 
     bool isJumps;
     
@@ -16,7 +17,9 @@ public class CharacterScript : MonoBehaviour
     charAnimator = GetComponent<Animator>(); 
     jump = GetComponent<Rigidbody2D>();
     }
-
+    private void OnCollisionStay2D(Collision2D other) {
+        countJump=0;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -46,13 +49,13 @@ public class CharacterScript : MonoBehaviour
         }
         // player lompat 
         // get key down hanya bisa dipakai sekali saja, get key bisa dipakai ditahan
-        if(Input.GetKeyDown(KeyCode.UpArrow))
+        if ((Input.GetKeyDown(KeyCode.UpArrow)) && (countJump<1))
         {
-        isJumps=true;
-        charAnimator.SetTrigger("isJump");
+            jump.AddForce(new Vector3(0f,1f,0f)*10,ForceMode2D.Impulse);
+            countJump+=1;
         }
         if(isJumps){
-        jump.AddForce(new Vector3(0.0f, -100.0f, 0.0f)*10f,  ForceMode2D.Impulse);
+        jump.AddForce(new Vector3(0.0f, 1f, 0.0f)*10f,  ForceMode2D.Impulse);
         isJumps=false;
         }
     }
