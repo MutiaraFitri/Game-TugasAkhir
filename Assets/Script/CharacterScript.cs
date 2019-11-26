@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterScript : MonoBehaviour
 {
+    public GameObject panelAtas;
     Animator charAnimator;
     GameObject attactEffect;
     private Rigidbody2D jump;
@@ -23,6 +24,7 @@ public class CharacterScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!GlobalScript.Instance.gameOver){
 
         // jika ingin jalaan maka pakai bool jika di lepas false
         //player jalan ke kiri
@@ -57,6 +59,31 @@ public class CharacterScript : MonoBehaviour
         if(isJumps){
         jump.AddForce(new Vector3(0.0f, 1f, 0.0f)*10f,  ForceMode2D.Impulse);
         isJumps=false;
+        }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.tag == "Monster"){
+            print("KENA!");
+            transform.localPosition = new Vector3(-65.946f,-1.238f,-5f);
+            CameraController.Instance.resetLocation();
+            GlobalScript.Instance.mati();
+        }
+        if(other.gameObject.tag == "Jurang"){
+            print("KENA!");
+            transform.localPosition = new Vector3(-65.946f,-1.238f,-5f);
+            CameraController.Instance.resetLocation();
+            GlobalScript.Instance.matiJatuh();
+        }
+        if(other.gameObject.tag == "Tutorial"){
+            panelAtas.gameObject.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        if(other.gameObject.tag == "Tutorial"){
+            panelAtas.gameObject.SetActive(false);
         }
     }
 }

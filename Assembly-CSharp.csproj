@@ -53,10 +53,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\AnimationMenuScript.cs" />
+     <Compile Include="Assets\Script\ButtonController.cs" />
+     <Compile Include="Assets\Script\ButtonMenu.cs" />
      <Compile Include="Assets\Script\CameraController.cs" />
      <Compile Include="Assets\Script\CharacterScript.cs" />
      <Compile Include="Assets\Script\CoinScript.cs" />
      <Compile Include="Assets\Script\GlobalScript.cs" />
+     <Compile Include="Assets\Script\music\MusicManager.cs" />
      <Compile Include="Assets\Script\MusuhScript.cs" />
      <Compile Include="Assets\Script\platform.cs" />
      <Compile Include="Assets\Script\PlatformAtas.cs" />
