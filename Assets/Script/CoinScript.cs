@@ -16,7 +16,7 @@ public class CoinScript : MonoBehaviour
         
     }
     private void OnTriggerEnter2D(Collider2D other) {
-        if( Input.GetKeyDown ("Mouse 0") ){
+        if( other.gameObject.name == "player"){
             // Text my_text = GameObject.Find("Middleground/Coins/Canvas/score").GetComponent<Text>();
             print ("kena");
             Destroy(this.gameObject);
