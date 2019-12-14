@@ -14,7 +14,6 @@ public class MusuhScript : MonoBehaviour
     {
         musuh.GetComponent<GameObject>();
         musuh1.GetComponent<GameObject>();
-        
     }
 
     // Update is called once per frame

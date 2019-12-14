@@ -19,6 +19,7 @@ public class GlobalScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetFloat("Checkpoint",0);
         Instance = this;
         healthAwal = health;
     }

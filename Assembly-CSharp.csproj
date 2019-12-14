@@ -65,6 +65,8 @@
      <Compile Include="Assets\Script\platform.cs" />
      <Compile Include="Assets\Script\PlatformAtas.cs" />
      <Compile Include="Assets\Script\TextScript.cs" />
+     <Compile Include="Assets\Scripts\FollowPath.cs" />
+     <Compile Include="Assets\Scripts\MovementPath.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/dimas/OneDrive/Documents/GameAkhir/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>

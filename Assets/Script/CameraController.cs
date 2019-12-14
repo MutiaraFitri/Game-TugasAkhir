@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    public void resetLocation(){
-            transform.position = new Vector3(-55.95f,0,-10f);
+    public void resetLocation(float x){
+            transform.position = new Vector3(-55.95f+x,0,-10f);
     }
 }
